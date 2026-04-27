@@ -17,7 +17,7 @@ The project then moves beyond forecasting accuracy and pivots to a more realisti
 # Live Dashboard
 
 
-[View Interactive Dashboard Here](insert url)
+[View Interactive Dashboard Here](https://retail-demand-forecasting-and-inventory-optimization-f27yhgzln.streamlit.app/)
 
 
 Using this dashboard users may:
@@ -28,7 +28,7 @@ Using this dashboard users may:
 - Receive recommended inventory levels based on risk
 
 
-![Dashboard Preview](insert png)
+![Dashboard Preview](Images/inventory_sim.png)
 
 
 # Business Context
@@ -247,7 +247,7 @@ Key Observations:
 - Produce required aforementioned specialized handling
 - Better forecasts became more useful once paired with inventory logic
 
-![Metrics Table](insert png from dash)
+![Metrics Table](Images/dash_1.png)
 
 
 # Decision Layer and Inventory Logic
@@ -278,7 +278,7 @@ The decision layer turned the model into a system with more realistic real-world
 # Dashboard Modules
 
 
-[View Dashboard Here](insert dash url)
+[View Dashboard Here](https://retail-demand-forecasting-and-inventory-optimization-f27yhgzln.streamlit.app/)
 
 
 ## Command Center
