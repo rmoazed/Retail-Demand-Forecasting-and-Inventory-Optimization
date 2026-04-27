@@ -1,4 +1,4 @@
-## Overview
+# Overview
 
 
 This project is an end-to-end pipeline that forecasts category-level demand and converts predictions into operational inventory recommendations through an interactive Streamlit app using the  Corporación Favorita grocery dataset. 
@@ -14,7 +14,7 @@ The project then moves beyond forecasting accuracy and pivots to a more realisti
 - An interactive scenario simulation for operations teams
 
 
-## Live Dashboard
+# Live Dashboard
 
 
 [View Interactive Dashboard Here](insert url)
@@ -31,7 +31,7 @@ Using this dashboard users may:
 ![Dashboard Preview](insert png)
 
 
-## Business Context
+# Business Context
 
 
 Retail inventory management is a significant forecasting problem that bears real financial consequences.
@@ -62,7 +62,7 @@ The challenge becomes more prominent yet when demand shifts due to:
 This project was designed to model those dynamics and produce actionable decision support outputs.
 
 
-## Dataset
+# Dataset
 
 
 This project uses the Corporación Favorita Grocery Sales Forecasting dataset. It can be found by clicking the link below.
@@ -90,7 +90,7 @@ Additional merged signals:
 - Calendar seasonality
 
 
-## Why Category-Level Forecasting?
+# Why Category-Level Forecasting?
 
 
 Instead of forecasting every SKU individually, this project forecasted demand at the **product-family level**.
@@ -106,13 +106,13 @@ Benefits of forecasting at the product-family level include:
 This choice also mirrors how many real business teams plan at aggregate levels before drilling deeper into data.
 
 
-## Feature Engineering
+# Feature Engineering
 
 
 A major focus of this project was transforming raw sales history into predictive signals through the implementation of feature engineering.
 
 
-# Lag Features
+## Lag Features
 
 
 Lag features represent prior demand values.
@@ -128,7 +128,7 @@ Examples:
 The usage of lag features is useful in that retail demand is highly autocorrelated. Recent sales often contain strong information about near-future sales.
 
 
-# Rolling Statistics
+## Rolling Statistics
 
 
 Examples:
@@ -146,7 +146,7 @@ Rolling statistical features are useful as they summarize short-term trend and v
 - High rolling std may indicate unstable demand requiring larger buffers in inventory stock
 
 
-# Calendar Features
+## Calendar Features
 
 
 - Day of week
@@ -176,10 +176,10 @@ Examples:
 Such features are useful as they correlate with real-world demand shifts that go beyond pure sales history.
 
 
-## Modeling Approach
+# Modeling Approach
 
 
-# Baseline: Naive Forecast
+## Baseline: Naive Forecast
 
 
 The naive forecast model used previous demand levels as a benchmark. In time series forecasting, beating a naive baseline, which already tends to be strong, is essential. Many models fail to outperform these simple models due to their already inherent robustness. 
@@ -188,7 +188,7 @@ The naive forecast model used previous demand levels as a benchmark. In time ser
 This project explicitly evaluated model lift against that benchmark.
 
 
-# Main Model: XGBoost
+## Main Model: XGBoost
 
 
 XGBoost was selected as it performs strongly on structure/tabular data with nonlinear relationships.
@@ -205,7 +205,7 @@ Reasons for choosing XGBoost:
 Separate models were trained per grocery category. 
 
 
-# Log- Transformed Targets
+## Log- Transformed Targets
 
 
 Log-transformed targets were used for more stable categories, such as Grocery I, to reduce skew and help the model handle larger sales ranges.
@@ -233,7 +233,7 @@ To handle the volatility, a conservative shrinking adjustment was layered onto n
 Different categories often require different forecasting strategies and modeling is not one-size-fits-all.
 
 
-## Results
+# Results
 
 
 XGBoost outperformed naive forecasting across multiple categories, with strongest gains in more stable segment demands (beverages, grocery I).
@@ -250,7 +250,7 @@ Key Observations:
 ![Metrics Table](insert png from dash)
 
 
-## Decision Layer and Inventory Logic
+# Decision Layer and Inventory Logic
 
 
 As known, forecasts alone do not tell a retailer how much to stock. 
@@ -275,25 +275,25 @@ Outputs:
 The decision layer turned the model into a system with more realistic real-world applications.
 
 
-## Dashboard Modules
+# Dashboard Modules
 
 
 [View Dashboard Here](insert dash url)
 
 
-# Command Center
+## Command Center
 
 
 Executive KPI summary and model comparisons (including evaluation metrics).
 
 
-# Forecast Lab
+## Forecast Lab
 
 
 Actual vs predicted sales by category with error tracking.
 
 
-# Inventory Simulator
+## Inventory Simulator
 
 
 Interactive planning tool based on user-dictated possible scenarios.
@@ -307,7 +307,7 @@ Users adjust:
 - Holiday status
 - Date
 
-# Category Intelligence
+## Category Intelligence
 
 
 Explains drivers of demand through:
@@ -316,7 +316,7 @@ Explains drivers of demand through:
 - Weekday patterns
 - Operational interpretation
 
-## Repository Structure
+# Repository Structure
 
 
 - app.py: 
@@ -330,7 +330,7 @@ Explains drivers of demand through:
 - requirements.txt
 
 
-## Key Takeaways
+# Key Takeaways
 
 
 - Strong feature engineering can outperform more complex raw-model approaches
@@ -339,7 +339,7 @@ Explains drivers of demand through:
 - Prediction systems require business translation layers to be actionable
 
 
-## Future Improvements
+# Future Improvements
 
 
 - Store-level hierarchical forecasting
