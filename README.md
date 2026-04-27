@@ -319,7 +319,7 @@ Explains drivers of demand through:
 # Repository Structure
 
 
-- app.py: 
+- app.py: deploy streamlit app
 - data/
 - models/
 - src/
