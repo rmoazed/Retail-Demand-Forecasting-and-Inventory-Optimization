@@ -323,9 +323,9 @@ Explains drivers of demand through:
 - data/
 - models/
 - src/
-  - data_utils.py
-  - modeling_utils.py
-  - decision_layer.py
+  - data_utils.py: data loading, cleaning, and preprocessing functions
+  - modeling_utils.py: model loading, forecasting, and prediction logic
+  - decision_layer.py: converts forecasts into inventory recommendations and risk outputs
 - requirements.txt
 
 
