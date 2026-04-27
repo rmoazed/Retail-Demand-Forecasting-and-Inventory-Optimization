@@ -326,7 +326,6 @@ Explains drivers of demand through:
   - data_utils.py
   - modeling_utils.py
   - decision_layer.py
-- notebooks/
 - requirements.txt
 
 
